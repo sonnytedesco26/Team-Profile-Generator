@@ -33,7 +33,8 @@ const employeePrompt=()=>{
             managerPrompt();
         };
         if(response.employeeRole == 'finished'){
-            let result = htmlTemplate(teamArray)
+            let result = htmlTemplate(teamArray);
+            console.log('Creating html.....')
             makeHtml(result);
         }
     })

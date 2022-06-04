@@ -21,12 +21,13 @@ const layout = x =>{
     <html>
         <head>
         <title>Team Profile Generator</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="./style.css"><source src="../htmlTemplate.js" type="htmlTemplate">
         </head>
         <body>
-        <header class = "container">
-            <div class = "flex box justify-center">
-            <h1>Team</h1>
+        <header class="container">
+            <div class="flex box justify-center">
+            <h1>My Team</h1>
             </div>
         </header>
         <main class = "container">
@@ -40,16 +41,16 @@ const layout = x =>{
 
 const engineer = engineerCard =>{
     return `
-        <div class='card'>
+        <div class='box card'>
             <div class='box'>
-                <h1>Name: ${engineerCard.getName()}</h1>
-                <h3>Role: ${engineerCard.getRole()}</h3>
+                <h2>Name: ${engineerCard.getName()}</h2>
+                <h2>Role: ${engineerCard.getRole()}</h2>
             </div>
             <div class='box'>
-                <ul>
-                    <li>ID: ${engineerCard.getId()}</li>
-                    <li>Email: ${engineerCard.getEmail()}</li>
-                    <li>Github: ${engineerCard.getGithub()}</li>
+                <ul class="list-group">
+                    <li class="list-group-item">ID: ${engineerCard.getId()}</li>
+                    <li class="list-group-item">Email: ${engineerCard.getEmail()}</li>
+                    <li class="list-group-item">Github: ${engineerCard.getGithub()}</li>
                 </ul>
             </div>
         </div>
@@ -59,15 +60,15 @@ const engineer = engineerCard =>{
 const intern = internCard =>{
     return `
         <div class='card'>
-            <div class='box'>
-                <h1>Name: ${internCard.getName()}</h1>
-                <h3>Role: ${internCard.getRole()}</h3>
+            <div class='box card'>
+                <h2>Name: ${internCard.getName()}</h2>
+                <h2>Role: ${internCard.getRole()}</h2>
             </div>
             <div class='box'>
-                <ul>
-                    <li>ID: ${internCard.getId()}</li>
-                    <li>Email: ${internCard.getEmail()}</li>
-                    <li>School: ${internCard.getSchool()}</li>
+                <ul class="list-group">
+                    <li class="list-group-item">ID: ${internCard.getId()}</li>
+                    <li class="list-group-item">Email: ${internCard.getEmail()}</li>
+                    <li class="list-group-item">School: ${internCard.getSchool()}</li>
                 </ul>
             </div>
         </div>
@@ -77,15 +78,15 @@ const intern = internCard =>{
 const manager = managerCard =>{
     return `
         <div class='card'>
-            <div class='box'>
-                <h1>Name: ${managerCard.getName()}</h1>
-                <h3>Role: ${managerCard.getRole()}</h3>
+            <div class='box card'>
+                <h2>Name: ${managerCard.getName()}</h2>
+                <h2>Role: ${managerCard.getRole()}</h2>
             </div>
             <div class='box'>
-                <ul>
-                    <li>ID: ${managerCard.getId()}</li>
-                    <li>Email: ${managerCard.getEmail()}</li>
-                    <li>Office Number: ${managerCard.getOfficeNumber()}</li>
+                <ul class="list-group">
+                    <li class="list-group-item">ID: ${managerCard.getId()}</li>
+                    <li class="list-group-item">Email: ${managerCard.getEmail()}</li>
+                    <li class="list-group-item">Office Number: ${managerCard.getOfficeNumber()}</li>
                 </ul>
             </div>
         </div>
