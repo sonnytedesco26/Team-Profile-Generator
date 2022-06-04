@@ -3,12 +3,12 @@ const {Engineer, engineerQuestions} = require('./lib/engineer');
 const {Intern, internQuestions} = require('./lib/intern');
 const {Manager, managerQuestions} = require('./lib/manager');
 
-const makeHtml = require('./htmlCreation/makeHtml');
-const htmlTemplate = require('./htmlCreation/htmlTemplate');
+const makeHtml = require('./src/makeHtml');
+const htmlTemplate = require('./src/htmlTemplate');
 
 teamArray=[];
 
-const main = () => employeePrompt;
+const main = () => employeePrompt();
 const employeePrompt=()=>{
     inquirer.prompt([
         {
@@ -32,7 +32,7 @@ const employeePrompt=()=>{
         if(response.employeeRole == 'managerAdd'){
             managerPrompt();
         };
-        if(answer.employeeRole == 'finished'){
+        if(response.employeeRole == 'finished'){
             let result = htmlTemplate(teamArray)
             makeHtml(result);
         }
