@@ -1,8 +1,10 @@
 const inquirer = require('inquirer');
-
 const {Engineer, engineerQuestions} = require('./lib/engineer');
 const {Intern, internQuestions} = require('./lib/intern');
 const {Manager, managerQuestions} = require('./lib/manager');
+
+const makeHtml = require('./htmlCreation/makeHtml');
+const htmlTemplate = require('./htmlCreation/htmlTemplate');
 
 teamArray=[];
 
@@ -16,7 +18,7 @@ const employeePrompt=()=>{
                 {name:'Engineer', value:'engineerAdd'},
                 {name:'Intern', value:'internAdd'},
                 {name:'Manager', value:'managerAdd'},
-                {name:'None', value:'none'},
+                {name:'Finished', value:'finished'},
             ]
         }
     ]).then(response =>{
@@ -29,8 +31,9 @@ const employeePrompt=()=>{
         if(response.employeeRole == 'managerAdd'){
             managerPrompt();
         };
-        if(answer.employeeRole == 'none'){
-
+        if(answer.employeeRole == 'finished'){
+            let result = htmlTemplate(teamArray)
+            makeHtml(result);
         }
     })
 };
