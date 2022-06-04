@@ -13,7 +13,7 @@ test('Test universal GET methods', ()=>
         const employee = new Employee(1,'tony bonzo','tony@demicky.com');
         expect(employee.getId()).toBe(employee.id);
         expect(employee.getName()).toBe(employee.name);
-        expect(employee.getRole()).toBe(employee.role);
+        expect(employee.getRole()).toBe('Employee');
         expect(employee.getEmail()).toBe(employee.email);
     }
 )
