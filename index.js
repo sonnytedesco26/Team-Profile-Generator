@@ -8,6 +8,7 @@ const htmlTemplate = require('./htmlCreation/htmlTemplate');
 
 teamArray=[];
 
+const main = () => employeePrompt;
 const employeePrompt=()=>{
     inquirer.prompt([
         {
@@ -68,3 +69,4 @@ const managerPrompt=()=>{
         return employeePrompt();
     })
 };
+main();
