@@ -11,6 +11,9 @@ Video Demo:
 ## Installation
 When downloading the repo, go to the root directory in the terminal and type in 'npm install'.
 
+## Use
+Once installed, open the terminal in the root directory of the repo. Run "node index.js" to start the app and set the employees. Once ready, select the 'Finished' option in the terminal. This will create an HTML file in the dist directory which will generate your returned results. If you want to test the repo to see if the functions such as GetRole() work properly, run in the root directory, "npm run test" 
+
 ## User Story
 ```
 AS A manager
