@@ -4,9 +4,7 @@ For this module, the challenge was to create Node.js terminal app that creates a
 
 Video Demo:
 
-[Link] https://drive.google.com/file/d/1IRDvYdC-Tj2uMu9hWll08oqTYlwCkYd5/view?usp=sharing
-
-![Demo](/assets/TeamProfileGeneratorDemo.mp4)
+![Link] https://drive.google.com/file/d/1IRDvYdC-Tj2uMu9hWll08oqTYlwCkYd5/view?usp=sharing
 
 ## Installation
 When downloading the repo, go to the root directory in the terminal and type in 'npm install'.
